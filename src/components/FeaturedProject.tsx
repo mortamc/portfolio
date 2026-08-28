@@ -69,7 +69,7 @@ export default function FeaturedProjectCard() {
         {featuredProject.links && (
           <div className="mt-6 flex flex-wrap gap-3">
             {featuredProject.links.map((link) => (
-              
+              <a
                 key={link.label}
                 href={link.href}
                 target="_blank"
