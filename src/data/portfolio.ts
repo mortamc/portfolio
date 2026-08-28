@@ -34,7 +34,7 @@ export const featuredProject: FeaturedProject = {
     'Sitio e-commerce de repuestos desarrollado para un cliente real. Stack: React + Vite + Supabase, con panel de administración propio e integración con la base de datos de productos existente del negocio (migrada desde Access).',
   tags: ['React', 'Vite', 'Supabase', 'Cloudflare Pages'],
   links: [
-    { label: 'Ver sitio', href: '#' },
+    { label: 'Ver sitio', href: 'https://webdevelop-rsi.lautaby12.workers.dev/' },
     { label: 'GitHub', href: '#' },
   ],
   screenshots: [
