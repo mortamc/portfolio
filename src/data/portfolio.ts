@@ -7,6 +7,7 @@ export const personal = {
   tagline: 'Desarrollador Full Stack',
   tagline2: 'Visión técnico / comercial',
   bio: 'Estudiante de Desarrollo de Software en el ITU (UNCUYO) y desarrollador freelance en Mendoza, Argentina. Combino programación full stack con una mirada comercial y administrativa: no solo construyo productos, entiendo el negocio detrás de ellos. Busco crecer hacia roles que integren lo técnico con lo comercial, como Product Manager, Sales Engineer o Technical Account Manager.',
+  photo: '/foto.png' as string | undefined,
 };
 
 export const terminalLines = [
@@ -24,7 +25,7 @@ export type Project = {
 };
 
 export type FeaturedProject = Project & {
-  screenshots: { alt: string; placeholder: string }[];
+  screenshots: { alt: string; placeholder: string; image?: string }[];
 };
 
 export const featuredProject: FeaturedProject = {
@@ -37,9 +38,9 @@ export const featuredProject: FeaturedProject = {
     { label: 'GitHub', href: '#' },
   ],
   screenshots: [
-    { alt: 'Página principal de WebRepuestoSanIsidro', placeholder: 'Captura 1' },
-    { alt: 'Catálogo de productos', placeholder: 'Captura 2' },
-    { alt: 'Panel de administración', placeholder: 'Captura 3' },
+    { alt: 'Página principal de WebRepuestoSanIsidro', placeholder: 'Captura 1', image: '/screenshot-1.png' },
+    { alt: 'Catálogo de productos', placeholder: 'Captura 2', image: '/screenshot-2.png' },
+    { alt: 'Panel de administración', placeholder: 'Captura 3', image: '/screenshot-3.png' },
   ],
 };
 
@@ -78,8 +79,8 @@ export type SkillCategory = {
 };
 
 export const skillCategories: SkillCategory[] = [
-  { title: 'Frontend', skills: ['React', 'Vite', 'TypeScript', 'Tailwind'] },
-  { title: 'Backend / DB', skills: ['Supabase'] },
+  { title: 'Frontend', skills: ['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS'] },
+  { title: 'Backend / DB', skills: ['Node.js', 'Python', 'SQL', 'Supabase'] },
   { title: 'Deploy / Infra', skills: ['Cloudflare Pages'] },
   { title: 'Otros', skills: ['Java (bytecode / modding)'] },
 ];

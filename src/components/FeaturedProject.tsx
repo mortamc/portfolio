@@ -18,15 +18,23 @@ export default function FeaturedProjectCard() {
         </p>
 
         <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
-          {featuredProject.screenshots.map((shot, i) => (
-            <div
-              key={i}
-              className="flex aspect-video items-center justify-center rounded-lg border border-ink-700 bg-ink-900 font-mono text-xs text-ink-500"
-            >
-              {/* Reemplazar por: <img src={`/screenshot-${i+1}.png`} alt={shot.alt} className="h-full w-full rounded-lg object-cover" /> */}
-              [ {shot.placeholder} ]
-            </div>
-          ))}
+          {featuredProject.screenshots.map((shot, i) =>
+            shot.image ? (
+              <img
+                key={i}
+                src={shot.image}
+                alt={shot.alt}
+                className="aspect-video w-full rounded-lg border border-ink-700 object-cover"
+              />
+            ) : (
+              <div
+                key={i}
+                className="flex aspect-video items-center justify-center rounded-lg border border-ink-700 bg-ink-900 font-mono text-xs text-ink-500"
+              >
+                [ {shot.placeholder} ]
+              </div>
+            )
+          )}
         </div>
 
         <div className="mt-5 flex flex-wrap gap-2">

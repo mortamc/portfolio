@@ -11,14 +11,21 @@ export default function About() {
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-14">
           <div className="flex-shrink-0 lg:w-56">
             <div className="group relative aspect-square w-40 overflow-hidden rounded-2xl border border-ink-700 bg-ink-850 sm:w-48 lg:w-full">
-              <div className="flex h-full w-full items-center justify-center font-mono text-xs text-ink-500">
-                {/* Reemplazar por: <img src="/foto.jpg" alt="Lautaro Mortarotti" className="h-full w-full object-cover" /> */}
-                <span className="text-center">
-                  [ foto ]
-                  <br />
-                  placeholder
-                </span>
-              </div>
+              {personal.photo ? (
+                <img
+                  src={personal.photo}
+                  alt={personal.name}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <div className="flex h-full w-full items-center justify-center font-mono text-xs text-ink-500">
+                  <span className="text-center">
+                    [ foto ]
+                    <br />
+                    placeholder
+                  </span>
+                </div>
+              )}
               <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-accent-500/0 transition-all group-hover:ring-accent-500/40" />
             </div>
             <div className="mt-4 flex items-center gap-2 font-mono text-xs text-ink-400">
