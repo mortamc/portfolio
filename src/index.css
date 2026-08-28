@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-ink-950 text-ink-200 font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent-500/30 text-accent-100;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-ink-950;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-ink-600;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto w-full max-w-5xl px-5 sm:px-8;
+  }
+
+  .section-label {
+    @apply font-mono text-sm text-accent-400 mb-3;
+  }
+
+  .section-title {
+    @apply font-mono text-2xl sm:text-3xl font-bold text-ink-100 mb-8;
+  }
+
+  .tag {
+    @apply inline-flex items-center rounded-md border border-ink-700 bg-ink-850 px-2.5 py-1 font-mono text-xs text-ink-300;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent-500 px-5 py-2.5 font-mono text-sm font-medium text-white transition-colors hover:bg-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-500/50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-ink-600 bg-ink-850 px-5 py-2.5 font-mono text-sm font-medium text-ink-200 transition-colors hover:border-accent-500 hover:text-accent-300 focus:outline-none focus:ring-2 focus:ring-accent-500/30;
+  }
+}
